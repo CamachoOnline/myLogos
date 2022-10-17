@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <link href="css/mylogo.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="mlgo--header js--header">
+        <section class="mlgo--section js--section mlgo--col mlgo--col-2">
+            <div class="mlg--col1"><h1 class="mlgo--hdg mlgo--hdg-1">myLOGO</h1></div>
+            <div class="mlg--col2"></div>
+        </section>
+    </header>
+    <main class="mlgo--main js--main isViewable">
+		
+		<!-- if user IS signed in : START -->
+        <section class="mlgo--section js--section mlgo--col mlgo--col-2 mlgo--header js--header">
+            <div class="mlg--col1"><h2 class="mlgo--hdg js--hdg mlgo--hdg-2 js--myGallery">myGallery</h2><h2 class="mlgo--hdg js--hdg mlgo--hdg-2 js--editGallery isHidden">edit Gallery</h2></div>
+            <div class="mlg--col2"><button class="mlgo--btn js--btn mlgo--btn-edit js--btn-edit">Edit Gallery</button><button  class="mlgo--btn js--btn mlgo--btn-view js--btn-view isHidden">View Gallery</button></div>
+        </section>
+		<script>
+			const lgArray = [[1,2,6],[4,7,9],[2,8,11]];
+			const foArray = [[1,2,6],[4,7,9],[14,8,11]];
+			const fiArray = [[13,14,18],[16,19,21],[26,20,23]];
+		</script>
+        <section class="mlgo--section js--section mlgo--col mlgo--col-4 mlgo--gallery js--gallery">
+			<!-- logos : START -->
+			<!-- initially built by PHP limit only 12 (see css build at bottom) -->
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-1 js--logo-1 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-2 js--logo-2 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-3 js--logo-3 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-4 js--logo-4 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-5 js--logo-5 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-6 js--logo-6 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-7 js--logo-7 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-8 js--logo-8 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-9 js--logo-9 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-10 js--logo-10 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-11 js--logo-11 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+            <div class="mlgo--item js--item"><button class="mlgo--logo js--logo logo-12 js--logo-12 an--fadein"><i></i><div class="mlgo--remove">-</div><div class="mlgo--add">+</div></button></div>
+			<!-- logos : END -->
+        </section>
+		<!-- CSS build by PHP : START (see _logo.scss at bottom "LOGOS")-->
+		<style>
+
+		</style>
+		<!-- CSS build by PHP : END -->
+		<!-- if user IS signed in : END -->
+		
+		<!-- if user NOT signed In : START -->
+		<section class="mlgo--section js--section mlgo--col mlgo--col-2 mlgo--signreg js--signreg">
+			<div class="mlg--col1">
+				<h2 class="mlgo--hdg mlgo--hdg-2">mySignIn</h2>
+				<hr/>
+				<form class="mlgo--form js--form mlg--form-signin js--form-signin">
+					<div class="mlgo--field js--field">
+						<label>Username:</label>
+						<input type="text" class="mlgo--input js--input" name="username" value=""/>
+						<div class="mlgo--msg"></div>
+					</div>
+					<div class="mlgo--field js--field">
+						<label>Password:</label>
+						<input type="password" class="mlgo--input js--input" name="password" value=""/>
+						<div class="mlgo--msg"></div>
+					</div>
+					<div class="mlgo--controls js--controls">
+						<button class="mlgo--btn js--btn mlgo--signin js--btn-signin">Sign In</button>
+					</div>
+				</form>
+			</div>
+			<div class="mlg--col2">
+				<h2 class="mlgo--hdg mlgo--hdg-2">myRegister</h2>
+				<hr/>
+				<form class="mlgo--form js--form mlg--form-register js--form-register">
+					<div class="mlgo--field js--field">
+						<label>Full Name:</label>
+						<input type="text" class="mlgo--input js--input" name="fullname" value=""/>
+						<div class="mlgo--msg"></div>
+					</div>
+					<div class="mlgo--field js--field">
+						<label>Email:</label>
+						<input type="password" id="Email" class="mlgo--input js--input" name="emailaddress" value=""/>
+						<div class="mlgo--msg"></div>
+					</div>
+					<div class="mlgo--field js--field">
+						<label>Confirm Email:</label>
+						<input type="password" class="mlgo--input js--input" name="emailconfirm" data-match="#Email" value=""/>
+						<div class="mlgo--msg"></div>
+					</div>
+					<div class="mlgo--field js--field">
+						<label>Username:</label>
+						<input type="text" class="mlgo--input js--input" name="username" value=""/>
+						<div class="mlgo--msg"></div>
+					</div>
+					<div class="mlgo--field js--field">
+						<label>Password:</label>
+						<input type="password" id="Pass" class="mlgo--input js--input" name="password" value=""/>
+						<div class="mlgo--msg"></div>
+					</div>
+					<div class="mlgo--field js--field">
+						<label>Confirm Password:</label>
+						<input type="password" class="mlgo--input js--input" name="passwordconfirm" data-match="#Pass" value=""/>
+						<div class="mlgo--msg"></div>
+					</div>
+					<div class="mlgo--controls js--controls">
+						<button class="mlgo--btn js--btn mlgo--signin js--btn-signin">Register</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<!-- if user NOT signed In : END -->
+		
+    </main>
+    <footer class="mlgo--footer"></footer>
+	
+	
+	
+    <link href="css/colorbox.css" rel="stylesheet"/>
+    <script id="jquery" src="scripts/jquery_cur.js"></script>
+    <script id="colorbox" src="scripts/jquery.colorbox-min.js"></script>
+    <script id="appscripts" src="scripts/mylogo.js"></script>
+	
+</body>
+
+</html>

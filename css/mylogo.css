@@ -1,0 +1,402 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 5, ../src/styles/settings/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, ../src/styles/settings/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 30, ../src/styles/settings/_reset.scss */
+body {
+  line-height: 1; }
+
+/* line 33, ../src/styles/settings/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 36, ../src/styles/settings/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 39, ../src/styles/settings/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 44, ../src/styles/settings/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 48, ../src/styles/settings/_reset.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 51, ../src/styles/settings/_reset.scss */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* line 54, ../src/styles/settings/_reset.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  font-size: 1em; }
+
+/* line 1, ../src/styles/base/_visibility.scss */
+.isHidden {
+  display: none; }
+
+/* line 1, ../src/styles/base/_body.scss */
+body {
+  margin: 0 auto;
+  width: 82em; }
+
+/* line 1, ../src/styles/base/_typography.scss */
+.mlgo--hdg {
+  font-weight: 900; }
+
+/* line 4, ../src/styles/base/_typography.scss */
+.mlgo--hdg-1 {
+  font-size: 1.5em; }
+
+/* line 7, ../src/styles/base/_typography.scss */
+.mlgo--hdg-2 {
+  font-size: 1.2em; }
+
+/* line 1, ../src/styles/base/_header.scss */
+.mlgo--header {
+  padding: 1em 0; }
+
+/* line 1, ../src/styles/base/_main.scss */
+.mlgo--main {
+  padding: 6em;
+  background-color: #ccc; }
+
+/* line 1, ../src/styles/base/_grid.scss */
+.mlgo--col {
+  display: grid; }
+
+/* line 4, ../src/styles/base/_grid.scss */
+.mlgo--gallery {
+  justify-items: center; }
+
+/* line 7, ../src/styles/base/_grid.scss */
+.mlg--col1 {
+  text-align: left; }
+
+/* line 10, ../src/styles/base/_grid.scss */
+.mlg--col2 {
+  text-align: right; }
+
+@media screen and (min-width: 1000px) {
+  /* line 32, ../src/styles/base/_grid.scss */
+  .mlgo--col-1 {
+    grid-template-columns: 1fr;
+    column-gap: 1em;
+    grid-row-gap: 1em; }
+
+  /* line 37, ../src/styles/base/_grid.scss */
+  .mlgo--col-2 {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    grid-row-gap: 1em; }
+
+  /* line 42, ../src/styles/base/_grid.scss */
+  .mlgo--col-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+    grid-row-gap: 1em; }
+
+  /* line 47, ../src/styles/base/_grid.scss */
+  .mlgo--col-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1em;
+    grid-row-gap: 1em; } }
+/* line 1, ../src/styles/base/_gallery.scss */
+.mlgo--gallery {
+  padding: 3em;
+  background-color: #fff; }
+
+/* line 1, ../src/styles/base/_signinreg.scss */
+.mlgo--signreg {
+  padding: 3em;
+  background-color: #fff; }
+
+/* line 5, ../src/styles/base/_signinreg.scss */
+.mlgo--signreg .mlg--col1,
+.mlgo--signreg .mlg--col2 {
+  text-align: left; }
+
+/* line 9, ../src/styles/base/_signinreg.scss */
+.mlgo--signreg form {
+  padding: 2em;
+  background-color: #DDDDDD;
+  -moz-border-radius: 1em;
+  border-radius: 1em; }
+
+/* line 15, ../src/styles/base/_signinreg.scss */
+.mlgo--field {
+  margin-bottom: 1em; }
+
+/* line 18, ../src/styles/base/_signinreg.scss */
+.mlgo--input {
+  padding: 0.5em;
+  width: 100%; }
+
+/* line 22, ../src/styles/base/_signinreg.scss */
+#cboxLoadedContent {
+  margin-bottom: 0 !important; }
+
+/* line 1, ../src/styles/logo/_logo.scss */
+.mlgo--logo {
+  width: 18em;
+  height: 18em;
+  background-color: #fff;
+  border: .0625em solid #ccc;
+  position: relative; }
+
+/* line 8, ../src/styles/logo/_logo.scss */
+.mlgo--remove {
+  padding: 0.3em;
+  width: 2em;
+  height: 2em;
+  background-color: #ff0000;
+  color: #fff;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  border: 0.125em solid #fff;
+  position: absolute;
+  top: -1em;
+  left: -1em; }
+
+/* line 21, ../src/styles/logo/_logo.scss */
+.mlgo--add {
+  font-size: 2em;
+  padding: 3.85em 4.2em;
+  background-color: #51C002;
+  color: #fff;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  border: 0.125em solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
+/* line 34, ../src/styles/logo/_logo.scss */
+.mlgo--logo i {
+  font-size: 3em; }
+
+/* line 38, ../src/styles/logo/_logo.scss */
+.mlgo--main.isViewable .mlgo--logo .mlgo--remove,
+.mlgo--main.isViewable .mlgo--logo .mlgo--add,
+.mlgo--main.isEditable .mlgo--logo .mlgo--add {
+  display: none; }
+
+/* line 43, ../src/styles/logo/_logo.scss */
+.mlgo--main.isEditable .mlgo--item:last-child .mlgo--logo {
+  border: 0; }
+
+/* line 46, ../src/styles/logo/_logo.scss */
+.mlgo--main.isEditable .mlgo--item:last-child .mlgo--logo .mlgo--add {
+  display: block; }
+
+/* line 49, ../src/styles/logo/_logo.scss */
+.mlgo--main.isEditable .mlgo--item:last-child .mlgo--logo .mlgo--remove {
+  display: none; }
+
+/* line 52, ../src/styles/logo/_logo.scss */
+.mlgo--main.isEditable .mlgo--logo {
+  cursor: pointer; }
+
+/* LOGOS : START */
+/* move to page inline style will be built by PHP. content property will be urls to images */
+/* line 59, ../src/styles/logo/_logo.scss */
+.logo-1 > i::before {
+  content: "1"; }
+
+/* line 62, ../src/styles/logo/_logo.scss */
+.logo-2 > i::before {
+  content: "2"; }
+
+/* line 65, ../src/styles/logo/_logo.scss */
+.logo-3 > i::before {
+  content: "3"; }
+
+/* line 68, ../src/styles/logo/_logo.scss */
+.logo-4 > i::before {
+  content: "4"; }
+
+/* line 71, ../src/styles/logo/_logo.scss */
+.logo-5 > i::before {
+  content: "5"; }
+
+/* line 74, ../src/styles/logo/_logo.scss */
+.logo-6 > i::before {
+  content: "6"; }
+
+/* line 77, ../src/styles/logo/_logo.scss */
+.logo-7 > i::before {
+  content: "7"; }
+
+/* line 80, ../src/styles/logo/_logo.scss */
+.logo-8 > i::before {
+  content: "8"; }
+
+/* line 83, ../src/styles/logo/_logo.scss */
+.logo-9 > i::before {
+  content: "9"; }
+
+/* line 86, ../src/styles/logo/_logo.scss */
+.logo-10 > i::before {
+  content: "10"; }
+
+/* line 89, ../src/styles/logo/_logo.scss */
+.logo-11 > i::before {
+  content: "11"; }
+
+/* line 92, ../src/styles/logo/_logo.scss */
+.logo-12 > i::before {
+  content: "12"; }
+
+/* line 95, ../src/styles/logo/_logo.scss */
+.logo-13 > i::before {
+  content: "13"; }
+
+/* line 98, ../src/styles/logo/_logo.scss */
+.logo-14 > i::before {
+  content: "14"; }
+
+/* line 101, ../src/styles/logo/_logo.scss */
+.logo-15 > i::before {
+  content: "15"; }
+
+/* line 104, ../src/styles/logo/_logo.scss */
+.logo-16 > i::before {
+  content: "16"; }
+
+/* line 107, ../src/styles/logo/_logo.scss */
+.logo-17 > i::before {
+  content: "17"; }
+
+/* line 110, ../src/styles/logo/_logo.scss */
+.logo-18 > i::before {
+  content: "18"; }
+
+/* line 113, ../src/styles/logo/_logo.scss */
+.logo-19 > i::before {
+  content: "19"; }
+
+/* line 116, ../src/styles/logo/_logo.scss */
+.logo-20 > i::before {
+  content: "20"; }
+
+/* line 119, ../src/styles/logo/_logo.scss */
+.logo-21 > i::before {
+  content: "21"; }
+
+/* line 122, ../src/styles/logo/_logo.scss */
+.logo-22 > i::before {
+  content: "22"; }
+
+/* line 125, ../src/styles/logo/_logo.scss */
+.logo-23 > i::before {
+  content: "23"; }
+
+/* line 128, ../src/styles/logo/_logo.scss */
+.logo-24 > i::before {
+  content: "24"; }
+
+/* line 131, ../src/styles/logo/_logo.scss */
+.logo-25 > i::before {
+  content: "25"; }
+
+/* line 134, ../src/styles/logo/_logo.scss */
+.logo-26 > i::before {
+  content: "26"; }
+
+/* LOGOS : END */
+/* line 1, ../src/styles/dialogue/_dialogue.scss */
+#cboxClose {
+  display: none; }
+
+/* line 2, ../src/styles/dialogue/_dialogue.scss */
+.mlgo--dialogue {
+  padding: 3em; }
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-14 12:59:57
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation fade-out
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+/* line 29, ../src/styles/animation/_animation.scss */
+.an--fadeout {
+  -webkit-animation: fade-out 1s ease-out both;
+  animation: fade-out 1s ease-out both; }
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-14 13:3:11
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* line 62, ../src/styles/animation/_animation.scss */
+.an--fadein {
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+/*# sourceMappingURL=mylogo.css.map */

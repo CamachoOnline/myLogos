@@ -1,0 +1,138 @@
+.mlgo--logo{
+	width:18em;
+	height:18em;
+	background-color:#fff;
+	border:.0625em solid #ccc;
+	position:relative;
+}
+.mlgo--remove{
+	padding: 0.3em;
+    width: 2em;
+    height: 2em;
+	background-color:#ff0000;
+	color:#fff;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+	border: 0.125em solid #fff;
+    position: absolute;
+	top: -1em;
+    left: -1em;
+}
+.mlgo--add{
+	font-size: 2em;
+    padding: 3.85em 4.2em;
+	background-color:#51C002;
+	color:#fff;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+	border: 0.125em solid #fff;
+    position: absolute;
+	top:0;
+    left:0;
+	z-index:1;
+}
+.mlgo--logo i {
+    font-size: 3em;
+}
+
+.mlgo--main.isViewable .mlgo--logo .mlgo--remove,
+.mlgo--main.isViewable .mlgo--logo .mlgo--add,
+.mlgo--main.isEditable .mlgo--logo .mlgo--add{
+	display:none;
+}
+.mlgo--main.isEditable .mlgo--item:last-child .mlgo--logo{
+	border:0;
+}
+.mlgo--main.isEditable .mlgo--item:last-child .mlgo--logo .mlgo--add{
+	display:block;
+}
+.mlgo--main.isEditable .mlgo--item:last-child .mlgo--logo .mlgo--remove{
+	display:none;
+}
+.mlgo--main.isEditable .mlgo--logo{
+	cursor:pointer;
+}
+
+/* LOGOS : START */
+/* move to page inline style will be built by PHP. content property will be urls to images */
+
+.logo-1 > i::before{
+	content:"1";
+}
+.logo-2 > i::before{
+	content:"2";
+}
+.logo-3 > i::before{
+	content:"3";
+}
+.logo-4 > i::before{
+	content:"4";
+}
+.logo-5 > i::before{
+	content:"5";
+}
+.logo-6 > i::before{
+	content:"6";
+}
+.logo-7 > i::before{
+	content:"7";
+}
+.logo-8 > i::before{
+	content:"8";
+}
+.logo-9 > i::before{
+	content:"9";
+}
+.logo-10 > i::before{
+	content:"10";
+}
+.logo-11 > i::before{
+	content:"11";
+}
+.logo-12 > i::before{
+	content:"12";
+}
+.logo-13 > i::before{
+	content:"13";
+}
+.logo-14 > i::before{
+	content:"14";
+}
+.logo-15 > i::before{
+	content:"15";
+}
+.logo-16 > i::before{
+	content:"16";
+}
+.logo-17 > i::before{
+	content:"17";
+}
+.logo-18 > i::before{
+	content:"18";
+}
+.logo-19 > i::before{
+	content:"19";
+}
+.logo-20 > i::before{
+	content:"20";
+}
+.logo-21 > i::before{
+	content:"21";
+}
+.logo-22 > i::before{
+	content:"22";
+}
+.logo-23 > i::before{
+	content:"23";
+}
+.logo-24 > i::before{
+	content:"24";
+}
+.logo-25 > i::before{
+	content:"25";
+}
+.logo-26 > i::before{
+	content:"26";
+}
+
+/* LOGOS : END */
