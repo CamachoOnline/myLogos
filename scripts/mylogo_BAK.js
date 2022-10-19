@@ -1,17 +1,6 @@
 const anArray = ["an--fadeout","an--fadein"];
 const cycles = 3;
 let inc = 0;
-let changeState_Edit = () =>
-{
-	let $main = $('.js--main');
-	$main.removeClass('isViewable').addClass('isEditable');
-	removeLogo();
-}
-let changeState_View = () =>
-{
-	let $main = $('.js--main');
-	$main.removeClass('isEditable').addClass('isViewable');
-}
 let uploadLogo = () =>
 {
 	let $form = $('.js--form-upload');
@@ -151,8 +140,7 @@ let removeLogo = () =>
 {
 	let $logo = $('.js--logo');
 	$logo.unbind('click');
-	$logo.on('click',function(event){
-		event.preventDefault();
+	$logo.on('click',function(){
 		let $l = $(this);
 		let $i = $l.closest('.js--item');
 		$i.remove();
@@ -160,8 +148,7 @@ let removeLogo = () =>
 	
 	let $llogo = $('.js--item:last-child .js--logo');
 	$llogo.unbind('click');
-	$llogo.on('click',function(event){
-		event.preventDefault();
+	$llogo.on('click',function(){
 		let myHTML = '<div class="mlgo--dialogue">';
 			myHTML += '<h2 class="mlgo--hdg mlgo--hdg-2">Select logo to upload:</h2>';
 			myHTML += '<form class="mlgo--form js--form mlgo--form-upload js--form-upload">';
@@ -182,18 +169,12 @@ let viewGallery = () =>
 {
 	$('.js--btn-view').on('click',function(){
 		let $btn = $(this);
-		let cHref = window.location.href;
-		if(cHref.indexOf('?state=edit')>-1){
-			let baseUrl = cHref.substring(0,cHref.indexOf('?state=edit'));
-			window.location.href = baseUrl;
-		}
-		/*
 		let $hdr = $btn.closest('.js--header');
 		let $edt = $hdr.find('.js--btn-edit');
 		let $main = $btn.closest('.js--main');
 		let $hdgEdit = $main.find('.js--editGallery');
 		let $hdgMy = $main.find('.js--myGallery');
-		*/
+		
 		/* Save logos
         let $logoForm = $main.find('.js--form-logos');
         let send_data = $logoForm.serialize(); || false;
@@ -217,14 +198,13 @@ let viewGallery = () =>
 				},2000);
             }
         });
-		
+		*/
 		
 		$btn.addClass('isHidden');
 		$edt.removeClass('isHidden');
 		$main.removeClass('isEditable').addClass('isViewable');
 		$hdgMy.removeClass('isHidden');
 		$hdgEdit.addClass('isHidden');
-		*/
 		//removeLogoRemove();
 	});
 }
@@ -232,11 +212,6 @@ let editGallery = () =>
 {
 	$('.js--btn-edit').on('click',function(){
 		let $btn = $(this);
-		let cHref = window.location.href;
-		if(!cHref.indexOf('?state=edit')>-1){
-			window.location.href = cHref+'?state=edit';
-		}
-		/*
 		let $hdr = $btn.closest('.js--header');
 		let $vue = $hdr.find('.js--btn-view');
 		let $main = $btn.closest('.js--main');
@@ -248,7 +223,6 @@ let editGallery = () =>
 		$hdgEdit.removeClass('isHidden');
 		$hdgMy.addClass('isHidden');
 		removeLogo();
-		*/
 	});
 }
 let cycleLogos = () =>
@@ -310,12 +284,6 @@ let cycleLogos = () =>
 }
 
 $(document).ready(function(){
-	let cHref = window.location.href;
-	if(cHref.indexOf('?state=edit')>-1){
-		changeState_Edit();
-	}else{
-		changeState_View();
-	}
 	if(lgArray){
 		cycleLogos();
 	}

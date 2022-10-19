@@ -22,8 +22,8 @@
 		?>
 			<!-- if user IS signed in : START -->
 			<section class="mlgo--section js--section mlgo--col mlgo--col-2 mlgo--header js--header">
-				<div class="mlg--col1"><h2 class="mlgo--hdg js--hdg mlgo--hdg-2 js--myGallery">myGallery</h2><h2 class="mlgo--hdg js--hdg mlgo--hdg-2 js--editGallery isHidden">edit Gallery</h2></div>
-				<div class="mlg--col2"><button class="mlgo--btn js--btn mlgo--btn-edit js--btn-edit">Edit Gallery</button><button  class="mlgo--btn js--btn mlgo--btn-view js--btn-view isHidden">View Gallery</button></div>
+				<div class="mlg--col1"><h2 class="mlgo--hdg js--hdg mlgo--hdg-2 mlgo--hdg-mygallery js--myGallery">myGallery</h2><h2 class="mlgo--hdg js--hdg mlgo--hdg-2 mlgo--hdg-editgallery js--editGallery">edit Gallery</h2></div>
+				<div class="mlg--col2"><button class="mlgo--btn js--btn mlgo--btn-edit js--btn-edit">Edit Gallery</button><button  class="mlgo--btn js--btn mlgo--btn-view js--btn-view">View Gallery</button></div>
 			</section>
 			
             <!-- logos : START -->

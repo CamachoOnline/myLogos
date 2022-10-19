@@ -35,6 +35,7 @@
     font-size: 3em;
 }
 
+
 .mlgo--main.isViewable .mlgo--logo .mlgo--remove,
 .mlgo--main.isViewable .mlgo--logo .mlgo--add,
 .mlgo--main.isEditable .mlgo--logo .mlgo--add{
@@ -51,6 +52,16 @@
 }
 .mlgo--main.isEditable .mlgo--logo{
 	cursor:pointer;
+}
+
+.mlgo--main.isViewable .mlgo--btn-view,
+.mlgo--main.isViewable .mlgo--hdg-editgallery{
+	display:none;
+}
+
+.mlgo--main.isEditable .mlgo--btn-edit,
+.mlgo--main.isEditable .mlgo--hdg-mygallery{
+	display:none;
 }
 
 /* LOGOS : START */
