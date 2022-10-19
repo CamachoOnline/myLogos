@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2022 at 01:01 AM
+-- Generation Time: Oct 19, 2022 at 10:20 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -108,30 +108,33 @@ CREATE TABLE `whologos_tbl` (
 INSERT INTO `whologos_tbl` (`id`, `userid`, `logoid`) VALUES
 (1, 1, 1),
 (2, 1, 2),
-(4, 1, 3),
-(5, 1, 4),
-(7, 1, 5),
-(8, 1, 6),
-(9, 1, 7),
-(10, 1, 8),
-(11, 1, 9),
-(12, 1, 10),
-(13, 1, 11),
-(14, 1, 12),
-(15, 1, 13),
-(16, 1, 14),
-(17, 1, 15),
-(18, 1, 16),
-(19, 1, 17),
-(20, 1, 18),
-(21, 1, 19),
-(22, 1, 20),
-(23, 1, 21),
-(24, 1, 22),
-(25, 1, 23),
-(26, 1, 24),
-(27, 1, 25),
-(28, 1, 26);
+(3, 1, 3),
+(4, 1, 4),
+(5, 1, 5),
+(6, 1, 6),
+(7, 1, 7),
+(8, 1, 8),
+(9, 1, 9),
+(10, 1, 10),
+(11, 1, 11),
+(12, 1, 12),
+(13, 1, 13),
+(14, 1, 14),
+(15, 1, 15),
+(16, 1, 16),
+(17, 1, 17),
+(18, 1, 18),
+(19, 1, 19),
+(20, 1, 20),
+(21, 1, 21),
+(22, 1, 22),
+(23, 1, 23),
+(24, 1, 24),
+(25, 1, 25),
+(26, 1, 26),
+(27, 1, 27),
+(28, 1, 28),
+(29, 1, 29);
 
 --
 -- Indexes for dumped tables
@@ -176,7 +179,7 @@ ALTER TABLE `users_tbl`
 -- AUTO_INCREMENT for table `whologos_tbl`
 --
 ALTER TABLE `whologos_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id', AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id', AUTO_INCREMENT=59;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

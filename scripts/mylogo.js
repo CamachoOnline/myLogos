@@ -155,7 +155,32 @@ let removeLogo = () =>
 		event.preventDefault();
 		let $l = $(this);
 		let $i = $l.closest('.js--item');
-		$i.remove();
+		let logoNum = $l.attr('data-logo');
+		let $f = $l.closest('.js--form');
+		let userId = $f.attr('data-user');
+		console.log(userId+" | "+logoNum);
+		$.ajax(
+        {
+            url : "scripts/removeLogo_API.php",
+            type: "POST",
+            data: {"userid":userId,"logoid":logoNum},
+            beforeSend: function()
+            {
+                $.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">removingLogo</h2></div>'});
+            },
+            success: function(data) {
+                if(data){
+                    setTimeout(function(){
+                        $.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">Success</h2></div>'});
+                        setTimeout(function(){
+                            window.location.reload();
+                        },2000);
+                    },2000);
+                }else{
+                    $.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">Failure</h2></div>'});
+                }
+            }
+        });
 	});
 	
 	let $llogo = $('.js--item:last-child .js--logo');
@@ -263,6 +288,7 @@ let cycleLogos = () =>
 		{
 			let $tLogo = $('.js--logo-'+tgLogos[i]);
 			
+			
 			if($tLogo.hasClass(anArray[0]))
 			{
 				$tLogo.removeClass(anArray[0]).addClass(anArray[1]);	
@@ -282,6 +308,8 @@ let cycleLogos = () =>
 				if($tLogo.hasClass('logo-'+foLogos[i]))
 				{
 					$tLogo.removeClass('logo-'+foLogos[i]).addClass('logo-'+fiLogos[i]);
+					let $tbLogo = $('.js--logo-'+tgLogos[i]);
+					$tbLogo.attr('data-logo',fiLogos[i]);
 				}
 				if($tLogo.hasClass(anArray[0]))
 				{
@@ -311,16 +339,22 @@ let cycleLogos = () =>
 
 $(document).ready(function(){
 	let cHref = window.location.href;
+	
 	if(cHref.indexOf('?state=edit')>-1){
 		changeState_Edit();
+		viewGallery();
 	}else{
 		changeState_View();
+		editGallery();
+        let $logo = $('.js--logo');
+        $logo.on('click',function(event){
+            event.preventDefault();
+        });
 	}
 	if(lgArray){
 		cycleLogos();
 	}
-	editGallery();
-	viewGallery();
+
 	signIn();
 	registerUser();
 });

@@ -45,9 +45,9 @@
 				echo 'const fiArray = [[13,14,18],[16,19,21],[26,20,23]];';
 				echo '</script>';
 		
-				echo '<form class="js--form js--form--logos">';
+				echo '<form class="js--form js--form--logos" data-user="'.$_SESSION['user_id'].'">';
 				echo '<section class="mlgo--section js--section mlgo--col mlgo--col-4 mlgo--gallery js--gallery">';
-			
+				
 				if($logoArray)
 				{
 					$inc1 = 1;
@@ -55,8 +55,8 @@
 					{
 						if($inc1<13){
 							echo '<div class="mlgo--item js--item">';
-							echo '<input type="hidden" name="logofile-'.$inc1.' value="'.$logoArray[$i].'"/>';
-							echo '<button class="mlgo--logo js--logo logo-'.$inc1.' js--logo-'.$inc1.' an--fadein">';
+							//echo '<input type="hidden" name="mlgo--hidden js--hidden-'.$inc1.' logofile-'.$inc1.' value="'.$logoArray[$i].'"/>';
+							echo '<button class="mlgo--logo js--logo logo-'.$inc1.' js--logo-'.$inc1.' an--fadein" data-logo="'.$inc1.'">';
 							echo '<i></i>';
 							echo '<div class="mlgo--remove">-</div><div class="mlgo--add">+</div>';
 							echo '</button>';
