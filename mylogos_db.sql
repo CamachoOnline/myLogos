@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2022 at 10:20 PM
+-- Generation Time: Oct 26, 2022 at 11:40 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -65,7 +65,19 @@ INSERT INTO `logos_tbl` (`id`, `file`) VALUES
 (26, 'TechxCentral-redone3.png'),
 (27, 'unity.png'),
 (28, 'Uqido_logomodv2-21.png'),
-(29, 'xtinct3d-logo.png');
+(29, 'xtinct3d-logo.png'),
+(30, 'ibm-websphere.png'),
+(31, 'DandyLogo-01-1.png'),
+(32, 'fb_icon.png'),
+(33, 'KennedyWM logo-FINAL_0.png'),
+(34, 'LHT_Logo_LearnHelpTeach-01.png'),
+(35, 'celilcan.png'),
+(36, 'Fresh_Icon_RGB.png'),
+(37, 'LogoFinal2.png'),
+(38, 'NathanLogoSmall.png'),
+(39, 'RCJ-CREATIVE-A1-1024x776.png'),
+(40, 'preferences_desktop_assistive_technology_coloring_book_colouring-2555px.png'),
+(41, '0009.png');
 
 -- --------------------------------------------------------
 
@@ -106,35 +118,18 @@ CREATE TABLE `whologos_tbl` (
 --
 
 INSERT INTO `whologos_tbl` (`id`, `userid`, `logoid`) VALUES
-(1, 1, 1),
-(2, 1, 2),
-(3, 1, 3),
-(4, 1, 4),
-(5, 1, 5),
-(6, 1, 6),
-(7, 1, 7),
-(8, 1, 8),
-(9, 1, 9),
-(10, 1, 10),
-(11, 1, 11),
-(12, 1, 12),
-(13, 1, 13),
-(14, 1, 14),
-(15, 1, 15),
-(16, 1, 16),
-(17, 1, 17),
-(18, 1, 18),
-(19, 1, 19),
-(20, 1, 20),
-(21, 1, 21),
-(22, 1, 22),
-(23, 1, 23),
-(24, 1, 24),
-(25, 1, 25),
-(26, 1, 26),
-(27, 1, 27),
-(28, 1, 28),
-(29, 1, 29);
+(1, 1, 30),
+(2, 1, 31),
+(3, 1, 32),
+(4, 1, 33),
+(5, 1, 34),
+(6, 1, 35),
+(7, 1, 36),
+(8, 1, 37),
+(9, 1, 38),
+(10, 1, 39),
+(11, 1, 40),
+(12, 1, 41);
 
 --
 -- Indexes for dumped tables
@@ -167,7 +162,7 @@ ALTER TABLE `whologos_tbl`
 -- AUTO_INCREMENT for table `logos_tbl`
 --
 ALTER TABLE `logos_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id', AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id', AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `users_tbl`
@@ -179,7 +174,7 @@ ALTER TABLE `users_tbl`
 -- AUTO_INCREMENT for table `whologos_tbl`
 --
 ALTER TABLE `whologos_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id', AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id', AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

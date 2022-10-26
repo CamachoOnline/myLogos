@@ -1,8 +1,6 @@
 <?php
 // Include the database configuration file
 include 'db_config.php';
-$statusMsg = '';
-
 // File upload path
 $targetDir = "../images/logos/";
 $fileName = basename($_FILES["file"]["name"]);
@@ -16,20 +14,20 @@ if(!empty($_FILES["file"]["name"])){
         // Upload file to server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
-            $insert = $db->query("INSERT into logos_tbl (file) VALUES ('".$fileName."')");
+            $insert = $db->query("INSERT into logos_tbl (file) VALUES ('$fileName')");
             if($insert){
-                $statusMsg = true;
+                echo $db->insert_id;
             }else{
-                $statusMsg = false;
+                echo false;
             } 
         }else{
-            $statusMsg = false;
+            echo false;
         }
     }else{
-        $statusMsg = false;
+        echo false;
     }
+}else{
+	echo false;
 }
 
-// Display status message
-echo $statusMsg;
 ?>

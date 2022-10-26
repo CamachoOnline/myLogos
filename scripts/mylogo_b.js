@@ -35,59 +35,32 @@ let uploadLogo = () =>
 			event.preventDefault();
 			console.log("upload[CLICK]");
 			let $form = $(this).closest('.js--form');
-			let userId = $form.attr('data-user');
 			let file_data = $form.find('#LogoFile').prop('files')[0];   
 			let form_data = new FormData();                  
 			form_data.append('file', file_data);
 			//alert(form_data);                             
 			$.ajax({
 				url: 'scripts/uploadLogo_API.php', // <-- point to server-side PHP script 
-				dataType: 'json',  // <-- what to expect back from the PHP script, if anything
+				dataType: 'text',  // <-- what to expect back from the PHP script, if anything
 				cache: false,
 				contentType: false,
 				processData: false,
 				data: form_data,                         
-				type: 'POST',
+				type: 'post',
 				beforeSend: function()
                 {
                     $.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">uploadingLogo</h2></div>'});
                 },
 				success: function(data1){
 					if(data1){
-						let $form2 = $('.js--form--logos');
-						let userId2 = $form2.attr('data-user');
-						let logoId2 = data1;
-						let form_data2 = new FormData();
-						console.log("userid: "+userId2+" | logoid: "+logoId2);
-						form_data2.append('userid', userId2);
-						form_data2.append('logoid', logoId2);
-						$.ajax({
-							url: 'scripts/saveLogos_API.php', // <-- point to server-side PHP script 
-							dataType: 'json',  // <-- what to expect back from the PHP script, if anything
-							cache: false,
-							contentType: false,
-							processData: false,
-							data: form_data2,                         
-							type: 'POST',
-							beforeSend: function()
-							{
-								$.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">savingLogo</h2></div>'});
-							},
-							success: function(data2){
-								if(data2){
-									setTimeout(function(){
-										$.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">Saved</h2></div>'});
-										setTimeout(function(){
-											window.location.reload();
-										},2000);
-									},2000);
-								}else{
-									$.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">Failed to Save</h2></div>'});
-								}
-							}
-						});
+						setTimeout(function(){
+							$.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">Success</h2></div>'});
+							setTimeout(function(){
+								window.location.reload();
+							},2000);
+						},2000);
 					}else{
-						$.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">Failed to Uploading</h2></div>'});
+						$.colorbox({html:'<div class="mlgo--dialogue"><h2 class="mlgo--hdg mlgo--hdg-2">Failure</h2></div>'});
 					}
 				}
 			});
